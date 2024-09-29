@@ -2,7 +2,7 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
 const COLS = 10; // Количество колонок
-const ROWS = 13; // Количество рядов
+const ROWS = 14; // Количество рядов
 const BLOCK_SIZE = 30; // Размер одного блока
 
 // Цвета фигур
