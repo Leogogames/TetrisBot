@@ -14,26 +14,56 @@
             text-align: center;
         }
         .playfield{
-            border: 5px, solid, white;
+
             margin-left: auto;
             margin-right: auto;
-            height: 450px;
+            height: 330px;
             width: 320px;
             color: white;
             border-radius: 5px;
 
         }
+        .coins{
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 40px;
+            height: 100px;
+            width: 200px;
+            background: rgb(70,70,70);
+            background: radial-gradient(circle, rgba(70,70,70,1) 95%, rgba(93,93,93,1) 100%);
+            border-radius: 20px;
+
+        }
+        
+        .playbt{
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100px;
+            width: auto;
+            margin-top: 50px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+        }
+
         .botmenu{
             margin-top: 10px;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 10px;
             background-color: rgba(36, 36,36,0.5);
             height: 80px;
             width: 330px;
             border-radius: 5px;
             position: sticky;
             bottom: 0;
+
         }
 
         .botblock{
@@ -58,7 +88,10 @@
 <body>
     <div class="mainpanel">
         <div class="title"><p class="titleimg"><img src="imgs/icon.png" width="320px" height="120px"/></p></div>
-        <div class="playfield"></div>
+        <div class="playfield">
+            <div class="coins">0000</div>
+            <div class="playbt">Play</div>
+        </div>
         <div class="botmenu">
             <div class="task botblock" >Tasks</div>
             <div class="friends botblock">Friends</div>
