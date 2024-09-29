@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+        }
+
+        canvas {
+            border: 2px solid #fff;
+            background-color: #000;
+        }
+
+        .score {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .controls {
+            margin-top: 10px;
+        }
+
+        .button {
+            padding: 10px;
+            margin: 5px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="score">Score: <span id="score">0</span></div>
+    <canvas id="gameCanvas" width="300" height="600"></canvas>
+    
+    <!-- Кнопки управления для мобильных устройств -->
+    <div class="controls">
+        <button class="button" id="left">Left</button>
+        <button class="button" id="rotate">Rotate</button>
+        <button class="button" id="right">Right</button>
+        <button class="button" id="down">Down</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
