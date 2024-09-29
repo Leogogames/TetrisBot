@@ -25,16 +25,33 @@
         }
         .botmenu{
             margin-top: 10px;
-            border: 5px, solid, rgb(17, 17, 17);
             margin-left: auto;
             margin-right: auto;
-            background-color: rgb(36, 36,36);
+            background-color: rgba(36, 36,36,0.5);
             height: 80px;
-            width: auto;
-            color: white;
+            width: 330px;
             border-radius: 5px;
             position: sticky;
             bottom: 0;
+        }
+
+        .botblock{
+            float: left;
+            padding-top: 40px;
+            line-height: 10px;
+            font-size: 10px;
+            height: 80px;
+            width: 66px;
+            text-align: center;
+            color: gray;
+            background-color: black;
+
+        }
+        .play{
+            color:white;
+        }
+        .botblock :last-child{
+            margin-right: 0px;
         }
     </style>
 </head>
@@ -43,7 +60,11 @@
         <div class="title"><p class="titleimg"><img src="imgs/icon.png" width="320px" height="120px"/></p></div>
         <div class="playfield"></div>
         <div class="botmenu">
-            <div></div>
+            <div class="task botblock" >Tasks</div>
+            <div class="friends botblock">Friends</div>
+            <div class="play botblock">Play</div>
+            <div class="leaderboard botblock">Leaderboard</div>
+            <div class="airdrop botblock">Airdrop</div>
         </div>
     </div>
 </body>
