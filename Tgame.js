@@ -176,10 +176,27 @@ function playerDrop() {
 
 function playerMove(dir) {
     player.pos.x += dir;
+    
+    // Если фигура выходит за пределы арены или сталкивается с другой фигурой, отменяем движение
     if (collide(arena, player)) {
-        player.pos.x -= dir;
+      player.pos.x -= dir;
     }
-}
+  }
+  
+  function collide(arena, player) {
+    const [m, o] = [player.matrix, player.pos];
+    for (let y = 0; y < m.length; ++y) {
+      for (let x = 0; x < m[y].length; ++x) {
+        if (m[y][x] !== 0) {
+          // Проверяем, если фигура выходит за пределы арены или сталкивается с другой фигурой
+          if (!arena[y + o.y] || !arena[y + o.y][x + o.x] || arena[y + o.y][x + o.x][0] !== 0) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  }
 
 function playerReset() {
     const pieceType = pieces[(pieces.length * Math.random()) | 0];

@@ -32,9 +32,29 @@
       padding: 10px;
       margin: 5px;
     }
+
+    #game-over {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+    }
+
+    
   </style>
 </head>
 <body>
+  <div id="game-over" style="display: none;">
+    <h1>Игра окончена</h1>
+    <button id="restart">Начать заново</button>
+    <button id="go-menu">Главное меню</button>
+  </div>
+  <div><img src="imgs/icon.png" width="128px" height="48px"/></div>
   <div id="score">Score: 0</div>
   <canvas id="tetris" width="300" height="420"></canvas>
   
@@ -42,7 +62,6 @@
     <button id="left">⬅️</button>
     <button id="rotate">🔄</button>
     <button id="right">➡️</button>
-    <br>
     <button id="down">⬇️</button>
   </div>
   
