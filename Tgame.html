@@ -1,112 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Tetris</title>
-    <style>
-        body{           
-            background-color: black;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        canvas{
-            border: 2px solid rgb(53, 53, 53);
-            background-color: rgb(36,36,36);
-        }
-        
-        .gameCanvas{
-            height: 420px;
-            width: 300px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-
-        .score{
-            color: white;
-            font-size: 24px;
-            margin-bottom: 10px;
-            height: 40px;
-            width: 100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-
-        .controls{
-            margin-top: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 25px;
-            width: 300px;
-        }
-
-
-        .button{
-            padding: 10px;
-            margin: 5px;
-            margin-left: 28px;
-            background-color: #444;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #666;
-        }
-
-        .back{
-            color: black;
-            height: 20px;
-            width: 100px;
-            margin-top: 30px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: white;
-            text-align: center;
-            border-radius: 20px;
-        }
-        
-
-        .backbt{
-            text-decoration: none;
-        }
-
-        .titleimg{
-            text-align: center;
-        }        
-        
-        a {
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-
-        button {
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris Game</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+    }
+    canvas {
+      background-color: #111;
+      border: 2px solid #fff;
+    }
+    #score {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: white;
+      font-family: sans-serif;
+    }
+    #controls {
+      margin-top: 10px;
+    }
+    #controls button {
+      font-size: 20px;
+      padding: 10px;
+      margin: 5px;
+    }
+  </style>
 </head>
 <body>
-    <div class="mainpanel">
-        <div class="title"><p class="titleimg"><img src="imgs/icon.png" width="128px" height="48px"/></p></div>
-        <div class="score">Score: <span id="score">0</span></div>
-        <div class="gameCanvas"><canvas id="gameCanvas" width="300" height="420"></canvas></div>
-        <div class="controls">
-            <button class="button" id="left">←</button>
-            <button class="button" id="down">↓</button>
-            <button class="button" id="right">→</button>
-            <button class="button" id="rotate"> ↷</button>
-        <a href="index.html" class="backbt"><div class="back">← Back</div></a>
-            
-            
-    </div>
-    
-    <script src="game.js"></script>
+  <div id="score">Score: 0</div>
+  <canvas id="tetris" width="300" height="420"></canvas>
+  
+  <div id="controls">
+    <button id="left">⬅️</button>
+    <button id="rotate">🔄</button>
+    <button id="right">➡️</button>
+    <br>
+    <button id="down">⬇️</button>
+  </div>
+  
+  <script src="Tgame.js"></script>
 </body>
 </html>
