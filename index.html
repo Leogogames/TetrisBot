@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scale=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Combatible" content="ie-edge">
+    <title>Tetris</title>
+    <style>
+        body {
+            background-color: rgb(36,36,36);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .titleimg{
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        .pbt{
+            text-decoration: none;
+        }
+
+        .score{
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            border-radius: 30px;
+            font-size: 30px;
+            margin-top: 5%;
+        }
+
+        .playbt{
+            text-align: center;
+            vertical-align: middle;
+            font-size: 30px;
+            line-height: 100px;
+            height: 100px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            color: black;
+            background-color: white;
+            border-radius: 30px;
+            margin-top: 20%;
+        }
+
+        .botmenu{        
+            background-color: rgb(17, 17, 17);
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 30px;
+            height: 80px;
+            width: 330px;
+            position: sticky;
+            bottom: 0;
+            margin-top: 20%;
+        }
+
+        .botblock{
+            float: left;
+            padding-top: 40px;
+            line-height: 10px;
+            font-size: 10px;
+            height: 80px;
+            width: 66px;
+            text-align: center;
+            color: gray;
+        }
+
+        .botblock :last-child{
+            margin-right: 0px;
+        }
+        .botblock :first-child{
+            margin-left: 100px;
+        }
+
+        .Play{
+            color: white;
+        }
+
+        a {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="title"><p class="titleimg"><img src="imgs/icon.png" width="320px" height="120px"/></p></div>
+    <div class="score">0000</div>
+    <a class="pbt" href="#"><div class="playbt">Play</div></a>
+    <div class="botmenu">
+        <a href="tasks.html" class="botblock">Tasks</a>
+        <a href="Friends.html" class="botblock">Friends</a>
+        <a href="#" class="botblock Play">Play</a>
+        <a href="leaderboard.html" class="botblock">Leaderboard</a>
+        <a href="airdrop.html" class="botblock">Airdrop</a>
+    </div>
+    
+</body>
+</html>
